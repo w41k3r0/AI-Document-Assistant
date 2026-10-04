@@ -138,7 +138,7 @@ questionForm.addEventListener("submit", async (event) => {
 
         addMessage("You", question);
         const assistantMessage = addMessage("Assistant", data.answer);
-        renderSources(data.source, assistantMessage);
+        renderSources(data.sources, assistantMessage);
         scrollToMessage(assistantMessage);
 
         questionInput.value = "";
