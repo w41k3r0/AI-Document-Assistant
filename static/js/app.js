@@ -87,7 +87,7 @@ function renderDocuments(documents) {
         status.textContent = "Ready to ask";
 
         item.append(badge, info);
-        info.append(fileName, details);
+        info.append(fileName, status);
         documentList.append(item);
 
     }
