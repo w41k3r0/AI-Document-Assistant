@@ -77,7 +77,7 @@ def upload_documents():
                 "Make sure that they are readable, unencrypted PDFs "
                 "and try again."
             )
-        })
+        }), 422
 
     collections[session["session_id"]] = collection
 
