@@ -1,9 +1,8 @@
 from pathlib import Path
 import pymupdf
 
-pdf_path = Path(pdf_path)
-
 def extract_pdf(pdf_path):
+    pdf_path = Path(pdf_path)
     pages = []
     with pymupdf.open(pdf_path) as document:
         for page_number, page in enumerate(document, start=1):

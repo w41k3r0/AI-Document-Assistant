@@ -18,7 +18,7 @@ def get_llm():
 
     llm = ChatGoogleGenerativeAI(
         model = model_name,
-        api_key = api_key,
+        google_api_key = api_key,
         vertexai = False,
         timeout = 60,
         max_retries = 2,

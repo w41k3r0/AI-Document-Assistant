@@ -1,0 +1,16 @@
+Flask
+python-dotenv
+PyMuPDF
+
+langchain-core
+langchain-text-splitters
+langchain-community
+langchain-huggingface
+langchain-google-genai
+
+sentence-transformers
+transformers
+torch
+faiss-cpu
+
+gunicorn
