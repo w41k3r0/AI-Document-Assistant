@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document Assistant</title>
     <link 
     rel="stylesheet"
@@ -19,7 +19,7 @@
             </a>
             <a href="#documents" class="rounded-full border border-neutral-600
             px-4 py-2 text-sm text-neutral-200 transition-colors hover:border-neutral-300
-             hover:bg-white/5 focus-visible:outline-2 focus-visible:offset-4
+             hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4
               focus-visible:outline-white">
                 Add PDFs
             </a>
@@ -65,7 +65,7 @@
             <p id="upload-status" role="status" class="mt-4 text-sm text-neutral-300"></p>
             <ul id="document-list" class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2"></ul>
         </section>
-        <section id="chat-heading" class="mt-12">
+        <section aria-labelledBy="chat-heading" class="mt-12">
             <h2 id="chat-heading" class="sr-only">
                 Ask your documents
             </h2>
@@ -75,7 +75,7 @@
                     Upload your PDFs, then ask your question.
                 </p>
             </div>
-            <form id="question-form" action="{{ url_for('ask_question') }}" method="post"\
+            <form id="question-form" action="{{ url_for('ask_question') }}" method="post"
             class="mt-8">
                 <label for="question" class="sr-only">
                     Your question
@@ -94,7 +94,7 @@
                     class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-0 bg-neutral-100 text-xl text-neutral-950 
                     enabled:hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4
                     focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-40">
-                        <svg xmlns="http://www.w3.org"
+                        <svg xmlns="http://www.w3.org/2000/svg"
                             width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"        
                         ><path d="M12 19V5 M5 12l7-7 7 7"></path>
                         </svg>
