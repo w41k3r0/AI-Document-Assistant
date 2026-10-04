@@ -9,7 +9,7 @@ def answer_question(vector_store, question):
     if not chunks:
         return {
             "answer" : MISSING_ANSWER,
-            "source" : [],
+            "sources" : [],
         }
 
     context_parts = []
