@@ -244,7 +244,7 @@ function renderSources(sources, messageElement) {
 
 function showQuestionLoading() {
     const spinner = document.createElement("span");
-    spinner.className = "inline-block h-4 w-4 shrink-0 rounded-full border-neutral-600 border-t-neutral-100 motion-safe:animate-spin";
+    spinner.className = "inline-block h-4 w-4 shrink-0 rounded-full border-2 border-neutral-600 border-t-neutral-100 motion-safe:animate-spin";
     spinner.setAttribute("aria-hidden", "true");
 
     const label = document.createElement("span");
