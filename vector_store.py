@@ -11,9 +11,9 @@ def create_vector_store(chunks):
     metadata = []
     
     for chunk, vector in zip(chunks, vectors):
-        text_vector_pairs.append(
+        text_vector_pairs.append((
             chunk.page_content, vector
-        )
+        ))
         metadata.append(chunk.metadata)
 
     vector_store = FAISS.from_embeddings(
