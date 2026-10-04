@@ -27,7 +27,7 @@ uploadForm.addEventListener("submit", async (event) => {
     }
 
     const formData = new FormData(uploadForm)
-    uploadStatus.disabled = true;
+    uploadButton.disabled = true;
     pdfFiles.disabled = true;
     uploadStatus.textContent = "Uploading and processing your PDFs...";
 
@@ -58,7 +58,7 @@ uploadForm.addEventListener("submit", async (event) => {
     
     } finally {
         pdfFiles.disabled = false;
-        uploadStatus.disabled = pdfFiles.files.length === 0;
+        uploadButton.disabled = pdfFiles.files.length === 0;
     }
 
 })
@@ -102,7 +102,7 @@ questionForm.addEventListener("submit", async (event) => {
     }
     const question = questionInput.value.trim();
     if (!question) {
-        questionStatus.textcontent = "Please enter a question.";
+        questionStatus.textContent = "Please enter a question.";
         return;
     }
 
@@ -192,7 +192,7 @@ function addMessage(label, text) {
                 "ol", "li", "blockquote", "pre", "code", "hr", "table", "thead", "tbody", "tr",
                 "th", "td"
             ],
-            ALLOWED_DATA : ["start", "colspan", "rowspan"],
+            ALLOWED_ATTR : ["start", "colspan", "rowspan"],
             ALLOW_DATA_ATTR : false,
             ALLOW_ARIA_ATTR : false,
 
@@ -214,7 +214,7 @@ function renderSources(sources, messageElement) {
     }
 
     const sourceSection = document.createElement("div");
-    sourceSection.className = "mt-4 border-t border-netural-800 pt-4";
+    sourceSection.className = "mt-4 border-t border-neutral-800 pt-4";
 
     const heading = document.createElement("h3");
     heading.className = "mb-3 text-xs font-medium text-neutral-400";
@@ -258,7 +258,7 @@ function scrollToMessage(messageElement) {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     messageElement.scrollIntoView({
-        behaviour : reduceMotion ? "instant" : "smooth",
+        behavior : reduceMotion ? "instant" : "smooth",
         block : "start",
 
     });
