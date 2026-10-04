@@ -36,3 +36,24 @@ This is a Flask project that lets users upload PDF files and ask questions about
 - The app does not save conversation history.
 - Scanned or image-only PDFs may not work correctly because OCR is not included.
 - The app does not currently have user accounts or rate limiting.
+
+## Run locally
+- Clone or download this repository and open a terminal in the project folder.
+- Create and activate a virtual environment:
+   For Windows: 
+                python -m venv .venv
+                .venv\Scripts\activate
+   For macOS/Linux:
+                python3 -m venv .venv
+                source .venv/bin/activate
+- Install the required libraries:
+    pip install -r requirements.txt
+- Create a .env file in the project folder, beside app.py:
+    GOOGLE_API_KEY=your-gemini-api-key
+    GEMINI_MODEL=gemini-3.8-flash
+    SESSION_KEY=your-random-session-key
+    A session key can be generated with:
+    python -c "import secrets; print(secrets.token_hex(32))"
+- Start the Flask app:
+    python app.py
+- Open the local address shown in the terminal, usually http://127.0.0.1:5000.
