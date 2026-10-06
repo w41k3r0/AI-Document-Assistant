@@ -40,20 +40,16 @@ This is a Flask project that lets users upload PDF files and ask questions about
 ## Run locally
 - Clone or download this repository and open a terminal in the project folder.
 - Create and activate a virtual environment:
-   For Windows: 
-                python -m venv .venv
-                .venv\Scripts\activate
-   For macOS/Linux:
-                python3 -m venv .venv
-                source .venv/bin/activate
+   For Windows - Command 1: python -m venv | Command 2: .venv .venv\Scripts\activate
+   For macOS/Linux - Command 1: python3 -m venv .venv | Command 2: source .venv/bin/activate
 - Install the required libraries:
-    pip install -r requirements.txt
+    Run this command: pip install -r requirements.txt
 - Create a .env file in the project folder, beside app.py:
     GOOGLE_API_KEY=your-gemini-api-key
     GEMINI_MODEL=gemini-3.8-flash
     SESSION_KEY=your-random-session-key
     A session key can be generated with:
-    python -c "import secrets; print(secrets.token_hex(32))"
+    Run this command: python -c "import secrets; print(secrets.token_hex(32))"
 - Start the Flask app:
-    python app.py
+    Run this command: python app.py
 - Open the local address shown in the terminal, usually http://127.0.0.1:5000.

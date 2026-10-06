@@ -152,3 +152,7 @@ def handle_large_upload(error):
     return jsonify({
         "error" : "The upload request exceeds the 20 MiB limit."
     }), 413
+
+
+if __name__ == "__main__":
+    app.run()
